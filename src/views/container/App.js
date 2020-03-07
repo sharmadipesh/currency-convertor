@@ -7,7 +7,9 @@ export default class App extends Component{
     return(
       <div className="App">
         <Header {...this.props}/>
-        <Dashboard {...this.props}/>
+        <div className="mt-95 pl-25 pr-25">
+          <Dashboard {...this.props}/>
+        </div>
       </div>
     )
   }

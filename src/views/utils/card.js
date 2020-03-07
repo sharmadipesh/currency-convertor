@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Constants from 'config/constants';
+import {Constants} from '../config/constants';
 
 export default class Card extends React.Component {
   render() {
@@ -11,6 +11,7 @@ export default class Card extends React.Component {
       backgroundColor: Constants.white_color,
       borderRadius: this.props.borderRadius,
       minWidth: this.props.minWidth,
+      maxWidth: this.props.maxWidth,
       borderBottom: this.props.bottomBorder
         ? `${this.props.borderSize} solid ${this.props.borderColor}`
         : 'none',
@@ -31,7 +32,8 @@ Card.propTypes = {
   borderSize: PropTypes.string,
   borderColor: PropTypes.string,
   borderRadius: PropTypes.string,
-  minWidth: PropTypes.string
+  minWidth: PropTypes.string,
+  maxWidth: PropTypes.string
 };
 
 Card.defaultProps = {
@@ -42,5 +44,6 @@ Card.defaultProps = {
   borderColor: Constants.lime_green_color,
   borderRadius: '4px',
   minWidth: '',
+  maxWidth: '',
   pointerEvents: 'auto'
 };
