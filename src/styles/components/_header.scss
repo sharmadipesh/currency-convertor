@@ -1,0 +1,14 @@
+.Header-style-container{
+    background-color: #FFFFFF;
+    height: 55px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.2);
+    .header-name{
+        font-family: $lato-bold;
+        text-decoration: underline;
+        color: $lime-green;
+    }
+}

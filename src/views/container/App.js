@@ -1,13 +1,16 @@
-import React from 'react';
+import React,{Component} from 'react';
 import Dashboard from '../dashboard/dashboard';
+import Header from '../utils/header';
 
-function App() {
-  return (
-    <div className="App">
-      {/* <center className="style-check">Hello Im Using React</center> */}
-      <Dashboard />
-    </div>
-  );
+export default class App extends Component{
+  render(){
+    return(
+      <div className="App">
+        <Header {...this.props}/>
+        <Dashboard {...this.props}/>
+      </div>
+    )
+  }
 }
 
-export default App;
+

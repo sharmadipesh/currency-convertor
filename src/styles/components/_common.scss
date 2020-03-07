@@ -47,6 +47,6 @@
 // ======================================================
 @each $font-sizes in (18,22,24){
     .font-size-#{$font-sizes}{
-        font-size: #{$font-sizes};
+        font-size: #{$font-sizes}px;
     }
 }

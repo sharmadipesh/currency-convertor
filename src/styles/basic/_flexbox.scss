@@ -1,0 +1,116 @@
+
+.parent-inline {
+    display: inline-flex;
+}
+
+.parent-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.parent-row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.parent-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.parent-col-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+  //WRAP
+.parent-no-wrap {
+    flex-wrap: nowrap;
+}
+
+.parent-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+.parent-wrap {
+    flex-wrap: wrap;
+}
+
+  // JUSTIFY CONTENT
+.parent-h-start {
+    justify-content: flex-start;
+}
+
+.parent-h-end {
+    justify-content: flex-end;
+}
+
+.parent-h-center {
+    justify-content: center;
+}
+
+.parent-h-space-between {
+    justify-content: space-between;
+}
+
+.parent-h-space-around {
+    justify-content: space-around;
+}
+
+.parent-h-space-evenly {
+    justify-content: space-evenly;
+}
+
+//ALIGN ITEMS
+.parent-v-start {
+    align-items: start;
+}
+
+.parent-v-end {
+    align-items: end;
+}
+
+.parent-v-center {
+    align-items: center;
+}
+
+.parent-v-baseline {
+    align-items: baseline;
+}
+
+.parent-v-stretch {
+    align-items: stretch;
+}
+
+.parent-v-flex-end {
+    align-items: flex-end;
+}
+
+//v CONTENT ALIGNMENT
+.parent-align-start {
+    align-content: flex-start;
+}
+
+.parent-align-end {
+    align-content: flex-end;
+}
+
+.parent-align-center {
+    align-content: center;
+}
+
+.parent-align-space-between {
+    align-content: space-between;
+}
+
+.parent-align-space-around {
+    align-content: space-around;
+}
+
+.parent-align-space-evenly {
+    align-content: space-evenly;
+}
+
+.parent-align-stretch {
+    align-content: stretch;
+}
