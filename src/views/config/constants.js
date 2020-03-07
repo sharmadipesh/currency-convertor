@@ -1,5 +1,5 @@
 export const Constant={
-    cardinal_color:'#C7222A',
-    box_shadow_color:'#CCC',
+    lime_green_color:'#00D559',
+    box_shadow_color:'#CCCCCC',
     white_color:'#FFFFFF',
 }

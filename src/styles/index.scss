@@ -1,6 +1,9 @@
-@import './basic/app';
+// =================================
+//  All scss file imports
+// =================================
+@import './fonts/fonts';
 @import './basic/vars';
-@import './components/card';
+@import './basic/app';
 @import './components/common';
-@import './fonts/fonts'
+@import './components/dashboard';
 

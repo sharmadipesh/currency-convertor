@@ -39,7 +39,7 @@ Card.defaultProps = {
   shadowColor: Constants.box_shadow_color,
   borderSize: '4px',
   bottomBorder: true,
-  borderColor: Constants.cardinal_color,
+  borderColor: Constants.lime_green_color,
   borderRadius: '4px',
   minWidth: '',
   pointerEvents: 'auto'
