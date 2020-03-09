@@ -25,3 +25,20 @@
         font-weight: 700;
     }
 }
+
+// ===========================
+//  datepicker style
+// ===========================
+
+.react-calendar__tile--active{
+    background:$lime-green;
+}
+
+.react-calendar__tile--active:enabled:hover, .react-calendar__tile--active:enabled:focus{
+    background:$bright-cyan;
+}
+.react-daterange-picker__wrapper{
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+}

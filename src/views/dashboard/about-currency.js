@@ -36,6 +36,7 @@ export default class CurrencyInfo extends Component{
     getCurrencyRangeInfo=(api)=>{
         axios.get(api)
             .then( response => {
+                console.log("**********************88 ",api);
             if(response.data){
                 let ratesContainer=[];
                 Object.keys(response.data.rates).map(value=>{
@@ -63,7 +64,7 @@ export default class CurrencyInfo extends Component{
         let removeForward = pathname.replace('/','');
         let currencyInfopath = removeForward.split('-');
         this.getCurrencyHistoricInfo(`https://api.exchangeratesapi.io/latest?base=${currencyInfopath[0]}&symbols=${currencyInfopath[0]},${currencyInfopath[1]}`);
-        this.getCurrencyRangeInfo('https://api.exchangeratesapi.io/history?start_at=2019-03-07&end_at=2019-03-08&base=USD');
+        this.getCurrencyRangeInfo(`https://api.exchangeratesapi.io/history?start_at=${moment().subtract(30, 'days').format('YYYY-MM-DD') }&end_at=${moment().format('YYYY-MM-DD')}&base=${currencyInfopath[0]}`);
         this.setState({
             base:currencyInfopath[0]
         })
@@ -134,7 +135,7 @@ export default class CurrencyInfo extends Component{
                                         {this.state.currencyHistory && this.state.currencyHistory.map((value,index)=>{
                                             return  (<tr key={index}>
                                                 {Object.values(value).map((v,i)=>{
-                                                    return (<td className="col" key={i}>{v}</td>);
+                                                    return (<td className="col font-size-14" key={i}>{v}</td>);
                                                 })}</tr>)
                                         })}
                                     </tbody>
