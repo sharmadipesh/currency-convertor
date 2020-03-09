@@ -36,7 +36,6 @@ export default class CurrencyInfo extends Component{
     getCurrencyRangeInfo=(api)=>{
         axios.get(api)
             .then( response => {
-                console.log("**********************88 ",api);
             if(response.data){
                 let ratesContainer=[];
                 Object.keys(response.data.rates).map(value=>{
@@ -70,7 +69,6 @@ export default class CurrencyInfo extends Component{
         })
     }
 
-    // rangeDateHandler = date => this.setState({ date })
     rangeDateHandler = date => {
         let fromDate,toDate;
         if(date!= null){
@@ -87,7 +85,7 @@ export default class CurrencyInfo extends Component{
         return(<div>
             <div className="row mb-20">
                 <div className="col-md-6">
-                    <div className="font-size-22">Currency information</div>
+                    <div className="font-size-22 page-title">Currency information</div>
                 </div>
             </div>
             <div className="row mb-20">

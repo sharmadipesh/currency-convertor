@@ -38,6 +38,11 @@ export default class Dashboard extends Component{
     render(){
         return(
         <div>
+            <div className="row mb-20">
+                <div className="col-md-6">
+                    <div className="font-size-22 page-title">Dashboard</div>
+                </div>
+            </div>
             <div className="row mb-50">
                 <div className="col-12">
                     <Card className="p-25">
