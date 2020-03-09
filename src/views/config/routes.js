@@ -1,3 +1,4 @@
 export const Routes={
-    Dashboard:'/'
+    Dashboard:'/',
+    History:'/:base-:other'
 };
