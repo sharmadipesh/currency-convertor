@@ -4,6 +4,7 @@ import Card from '../utils/card';
 import idx from 'idx';
 import DateRangePicker from '@wojtekmaj/react-daterange-picker';
 import moment from 'moment';
+import {Link} from "react-router-dom";
 
 export default class CurrencyInfo extends Component{
 
@@ -33,6 +34,15 @@ export default class CurrencyInfo extends Component{
         })
     };
 
+    componentDidUpdate = (prevProps) =>{
+        // if(this.state.)
+        if(this.props.location.pathname!== prevProps.location.pathname){
+            this.currencyActionHandler();
+            this.getCurrencyHistoricInfo();
+            this.getCurrencyRangeInfo();
+        }
+    }
+
     getCurrencyRangeInfo=(api)=>{
         axios.get(api)
             .then( response => {
@@ -59,6 +69,10 @@ export default class CurrencyInfo extends Component{
     }
 
     componentDidMount = () => {
+        this.currencyActionHandler()
+    }
+
+    currencyActionHandler = () => {
         let pathname = idx(this.props.location,_=>_.pathname);
         let removeForward = pathname.replace('/','');
         let currencyInfopath = removeForward.split('-');
@@ -82,7 +96,8 @@ export default class CurrencyInfo extends Component{
 
 
     render(){
-        return(<div>
+        return(
+        <div className="about-currency-style-container">
             <div className="row mb-20">
                 <div className="col-md-6">
                     <div className="font-size-22 page-title">Currency information</div>
@@ -107,13 +122,11 @@ export default class CurrencyInfo extends Component{
             </div>
             <div className="row">
                 <div className="col-md-12">
-                    <Card className="p-25">
+                    <Card className="p-25 mb-30">
                         <div className="form-group">
                             <DateRangePicker
                                 onChange={this.rangeDateHandler}
                                 value={this.state.date}
-                                // className='form-control'
-                                calendarClassName="form-control"
                             />
                         </div>
                         <div className="mt-20">
@@ -141,6 +154,22 @@ export default class CurrencyInfo extends Component{
                             </div>
                         </div>
                     </Card>
+                </div>
+            </div>
+            <div className="sidebar-container">
+                <div className="mt-70">
+                    {this.state.currencyHistory && this.state.currencyHistory.map((value,index)=>{
+                        if(index === 0){
+                            return  Object.keys(value).map((v,i)=>{
+                                if(v!='Date' && v!= this.state.base){
+                                    return (<div className="border-bottom pl-35 pt-10 pb-10" key={i}>
+                                        <Link to={`/${this.state.base}-${v}`}>
+                                            {v}
+                                        </Link>
+                                    </div>);
+                                }
+                        })}
+                    })}
                 </div>
             </div>
         </div>)
