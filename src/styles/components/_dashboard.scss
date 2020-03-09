@@ -3,3 +3,25 @@
     color:$lime-green ;
     text-decoration: underline;
 }
+
+.form-group{
+    label{
+        font-family: $lato-bold;
+    }
+    .form-control:focus{
+        border-color: $soft-lime-green;
+        box-shadow: 0 0 0 0.2rem rgba($soft-lime-green, 0.25);
+    }
+}
+
+.currency-card-list{
+    .card-header{
+        font-family: $lato-medium;
+        font-weight: 600;
+        color:$lime-green ;
+    }
+    .currency-price{
+        color: $very-dark-blue;
+        font-weight: 700;
+    }
+}
